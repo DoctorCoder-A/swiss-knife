@@ -1,5 +1,5 @@
 
-echo 'enter name project (myProject):'
+echo 'enter saved database name from server project (project-baza):'
 
 read name_project
 

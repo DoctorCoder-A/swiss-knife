@@ -2,7 +2,7 @@ FILE=projects/
 if test -f "$FILE"; then
     echo "$FILE exists."
 fi
-echo 'enter new project name (myProject)'
+echo 'enter new project name (project)'
 
 read project_name
 
@@ -14,7 +14,7 @@ echo 'enter ssh port (22)'
 
 read port_ssh
 
-echo 'enter database name from server (Project)' 
+echo 'enter database name from server (project-baza)' 
 
 read name_db_remote
 
@@ -36,7 +36,7 @@ echo 'enter database container name (container-db)'
 
 read container_db
 
-echo 'enter database name from docker container (Project)'
+echo 'enter database name from docker container (project)'
 
 read name_db_container
 

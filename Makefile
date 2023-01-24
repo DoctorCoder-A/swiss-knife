@@ -9,9 +9,9 @@ add: add-project
 load: input-project-data backup install import-local reminder
 import: input-project-data import-local reminder
 install:
-	ssh -p ${PORT} ${HOST} mysqldump -u${USER_REMOTE_DB} -p${PASSWORD_REMOTE_DB}  ${NAME_REMOTE_DB} > ${DIR_SCRIPT}/${DIR_DUMPS}/${NAME_DUMP}
+	ssh -p ${PORT} ${HOST} mysqldump -u${USER_REMOTE_DB} -p${PASSWORD_REMOTE_DB}  ${NAME_REMOTE_DB} > ${DIR_SCRIPT}/${DIR_DUMPS}/${NAME_DUMP} || @echo 'ошибка при загрузке дампа, возможно неправильные данные, make add-project чтобы снова добавить проект '
 import-local: 
-	docker exec -i ${CONTAINER_DB} mysql -u${USER_REMOTE_DB} ${NAME_CONTAINER_DB} < ${DIR_SCRIPT}/${DIR_DUMPS}/${NAME_DUMP}
+	docker exec -i ${CONTAINER_DB} mysql -u${USER_REMOTE_DB} ${NAME_CONTAINER_DB} < ${DIR_SCRIPT}/${DIR_DUMPS}/${NAME_DUMP} || @echo 'ошибка при импорте дампа '
 add-project:
 	./addedProject.sh
 input-project-data:

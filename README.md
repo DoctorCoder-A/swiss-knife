@@ -13,28 +13,27 @@ after first start
 
 adding an alias for zsh to bash write `.bashrc`
 
-`     echo "dump ()
+```
+echo "dump ()
 {
    make load -C ${PWD}
-}" >> ~/.zshrc
-`
+}
 
-`     echo "dump-import ()
+dump-import ()
 {
    make import -C ${PWD}
-}" >> ~/.zshrc
-`
+}
 
-`     echo "dump-add ()
+dump-add ()
 {
    make add-project -C ${PWD}
 }" >> ~/.zshrc
-`
-`
-source ~/.zshrc
-`
 
-Теперь можно запускать в любом директории  с командой `dump`  и добавлять новые проекта коммандой `dump-add`
+
+source ~/.zshrc
+```
+
+Теперь можно запускать в любом директории  с командой `dump`  и добавлять новые проекта командой `dump-add` или загружать `dump-import` локальные дампы.
 
 
 Команды:

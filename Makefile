@@ -24,6 +24,6 @@ backup:
           mv ${DIR_DUMPS}/${NAME_DUMP} ${ALL_DIR}/${NAME_DUMP_BACKUP}-${NAME_DUMP};\
  	fi
 reminder:
-	@echo 'script worked success, Do not forget to remember Allah!'
+	@echo '####script worked success, Do not forget to remember Allah!#####'
 test:
 	@echo 'test1-----------------------'

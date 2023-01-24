@@ -62,4 +62,4 @@ PASSWORD_CONTAINER_DB=$password_db_container
 CONTAINER_DB=$container_db" > projects/.env-$project_name
 
 echo '************ locale data setup completed******************'
-echo '@run please  command:   make load'
+echo '@run please  command:   make load  or dump'

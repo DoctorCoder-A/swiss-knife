@@ -14,7 +14,7 @@ echo 'enter ssh port (22)'
 
 read port_ssh
 
-echo 'enter database name from server (project-baza)' 
+echo 'enter database name from server (projectdb)' 
 
 read name_db_remote
 

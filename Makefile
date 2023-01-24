@@ -5,8 +5,7 @@ ALL_DIR=dumps/backups
 -include projects/.env-${NAME_PROJECT}
 init: add-project dir-exist 
 add: add-project
-load: input-project-data backup install import-local 
-reminder
+load: input-project-data backup install import-local reminder
 import: input-project-data import-local reminder
 install:
 	ssh -p ${PORT} ${HOST} mysqldump -u${USER_REMOTE_DB} -p${PASSWORD_REMOTE_DB}  ${NAME_REMOTE_DB} > ${PWD}/${DIR_DUMPS}/${NAME_DUMP}

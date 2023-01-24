@@ -3,14 +3,15 @@ DIR_BACKUP=dumps/backups
 ALL_DIR=dumps/backups
 -include projectData
 -include projects/.env-${NAME_PROJECT}
+-include .env
 init: add-project dir-exist 
 add: add-project
 load: input-project-data backup install import-local reminder
 import: input-project-data import-local reminder
 install:
-	ssh -p ${PORT} ${HOST} mysqldump -u${USER_REMOTE_DB} -p${PASSWORD_REMOTE_DB}  ${NAME_REMOTE_DB} > ${PWD}/${DIR_DUMPS}/${NAME_DUMP}
+	ssh -p ${PORT} ${HOST} mysqldump -u${USER_REMOTE_DB} -p${PASSWORD_REMOTE_DB}  ${NAME_REMOTE_DB} > ${DIR_SCRIPT}/${DIR_DUMPS}/${NAME_DUMP}
 import-local: 
-	docker exec -i ${CONTAINER_DB} mysql -u${USER_REMOTE_DB} ${NAME_CONTAINER_DB} < ${PWD}/${DIR_DUMPS}/${NAME_DUMP}
+	docker exec -i ${CONTAINER_DB} mysql -u${USER_REMOTE_DB} ${NAME_CONTAINER_DB} < ${DIR_SCRIPT}/${DIR_DUMPS}/${NAME_DUMP}
 add-project:
 	./addedProject.sh
 input-project-data:

@@ -30,6 +30,10 @@ echo 'enter a name for new dumps (project.sql)'
 
 read name_dump
 
+echo 'enter path to project on server (/var/www/site)'
+
+read path_project
+
 echo '************remote data setup completed******************'
 
 echo 'enter database container name (container-db)'
@@ -51,6 +55,7 @@ read password_db_container
 touch projects/.env-$project_name
 
 echo "HOST=$host_ssh
+PATH_PROJECT=$path_project
 PORT=$port_ssh
 NAME_REMOTE_DB=$name_db_remote
 USER_REMOTE_DB=$user_db_remote

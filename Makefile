@@ -28,3 +28,5 @@ reminder:
 	@echo '####script worked success, Do not forget to remember Allah!#####'
 test:
 	@echo 'test1-----------------------'
+git-pull:
+	@ssh ${HOST} -p ${PORT} 'cd ${PATH_PROJECT} && git pull'

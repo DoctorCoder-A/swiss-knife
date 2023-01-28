@@ -29,6 +29,11 @@ dump-add ()
    make add-project -C ${PWD}
 }" >> ~/.zshrc
 
+gpull ()
+{
+   make git-pull -C ${PWD}
+}" >> ~/.zshrc
+
 
 source ~/.zshrc
 ```
